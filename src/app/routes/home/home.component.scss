@@ -13,9 +13,11 @@
 }
 
 .experience {
-  width: 51%;
   font-size: 0.9em;
   position: relative;
+  border-left: 1px dashed var(--primary);
+  padding-left: 2em;
+  margin: 0 1em;
 
   &:before {
     content: '';
@@ -26,6 +28,7 @@
     position: absolute;
     border-radius: 50%;
     top: 2px;
+    left: -6px;
   }
 
   .date, .position {
@@ -37,26 +40,32 @@
     color: darken($secondary, 15%);
   }
 
-  &:nth-child(even) {
-    text-align: right;
-    padding-right: 5%;
-    padding-bottom: 0.5em;
-    border-right: 1px dashed var(--primary);
+  @media (min-width: 769px) {
+    width: 51%;
+    margin: 0;
 
-    &:before {
-      right: -6px;
+    &:nth-child(even) {
+      text-align: right;
+      padding-right: 5%;
+      padding-bottom: 0.5em;
+      border-right: 1px dashed var(--primary);
+      border-left: none;
+
+      &:before {
+        right: -6px;
+        left: auto;
+      }
     }
-  }
 
-  &:nth-child(odd) {
-    margin-left: 2.5%;
-    transform: translateX(95%);
-    margin-top: -1em;
-    padding-left: 5%;
-    border-left: 1px dashed var(--primary);
+    &:nth-child(odd) {
+      margin-left: 2.5%;
+      transform: translateX(95%);
+      margin-top: -1em;
+      padding-left: 5%;
 
-    &:before {
-      left: -6px;
+      &:before {
+        left: -6px;
+      }
     }
   }
 }
