@@ -1,0 +1,82 @@
+@import '../../../variables';
+
+.hero {
+  padding: 5em 0;
+}
+
+.social a {
+  padding: 0.5em;
+
+  &:hover {
+    color: #555;
+  }
+}
+
+.experience {
+  width: 51%;
+  font-size: 0.9em;
+  position: relative;
+
+  &:before {
+    content: '';
+    background-color: var(--primary);
+    width: 11px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+  }
+
+  .date, .position {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .date {
+    color: darken($secondary, 15%);
+  }
+
+  &:nth-child(even) {
+    text-align: right;
+    padding-right: 5%;
+    padding-bottom: 0.5em;
+    border-right: 1px dashed var(--primary);
+
+    &:before {
+      right: -6px;
+    }
+  }
+
+  &:nth-child(odd) {
+    margin-left: 2.5%;
+    transform: translateX(95%);
+    margin-top: -1em;
+    padding-left: 5%;
+    border-left: 1px dashed var(--primary);
+
+    &:before {
+      left: -6px;
+    }
+  }
+}
+
+.top-skills {
+  img {
+    width: 70px;
+    height: auot;
+  }
+}
+
+.portfolio {
+  .portfolio-item {
+    position: relative;
+    transition: transform 0.1s;
+
+    &:hover {
+      transform: scale(1.1);
+      z-index: 50;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

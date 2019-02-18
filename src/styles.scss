@@ -1,0 +1,85 @@
+@import 'variables';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/images';
+
+@import '~bootstrap/scss/utilities/flex';
+@import '~bootstrap/scss/utilities/sizing';
+@import '~bootstrap/scss/utilities/spacing';
+@import '~bootstrap/scss/utilities/display';
+@import '~bootstrap/scss/utilities/text';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  color: #333;
+
+  &.underline {
+    border-bottom: 1px dashed #aaa;
+  }
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: -1px;
+  color: var(--primary);
+}
+
+a.btn {
+  font-weight: bold !important;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+img.img-frame {
+  border: 5px solid rgba(255, 255, 255, 0.75);
+
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+  padding: 4em 6em;
+}
+
+.white-shadow {
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+.speech-bubble {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.25em 0.75em;
+  border-radius: 3px;
+  color: #333;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.75);
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    border-width: 0 0 15px 15px;
+    border-style: solid;
+    border-color: transparent var(--accent);;
+  }
+}
